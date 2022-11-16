@@ -1,0 +1,59 @@
+CREATE TABLE brands (
+brand_id SERIAL PRIMARY KEY,
+brand_name VARCHAR(40)
+);
+
+CREATE TABLE models (
+model_id SERIAL PRIMARY KEY,
+brand_id SMALLINT REFERENCES brands(brand_id),
+model_name VARCHAR(40)
+);
+
+CREATE TABLE features (
+feature_id SERIAL PRIMARY KEY,
+description VARCHAR(40),
+feature_price INT NOT NULL
+);
+
+CREATE TABLE dealers (
+dealer_id SERIAL PRIMARY KEY,
+dealer_name VARCHAR(40),
+region VARCHAR(40)
+);
+
+CREATE TABLE vehicles (
+vin SERIAL PRIMARY KEY,
+price INT NOT NULL,
+model_id SMALLINT NOT NULL REFERENCES models(model_id),
+dealer_id SMALLINT NOT NULL REFERENCES dealers(dealer_id),
+option_id SMALLINT NOT NULL REFERENCES features(feature_id)
+);
+
+
+CREATE TABLE customers (
+customer_id SERIAL PRIMARY KEY,
+first_name VARCHAR(40) NOT NULL,
+last_name VARCHAR(40) NOT NULL,
+region VARCHAR(40) NOT NULL,
+email VARCHAR(40),
+phone VARCHAR(40)
+);
+
+CREATE TABLE orders (
+order_id SERIAL PRIMARY KEY,
+order_date DATE,
+customer_id  SMALLINT REFERENCES customers(customer_id),
+vin SMALLINT REFERENCES vehicles(vin)
+);
+
+
+CREATE INDEX priceidx ON vehicles (price);
+
+CREATE INDEX lastnameidx ON customers (last_name);
+
+CREATE INDEX firstnameidx ON customers (first_name);
+
+CREATE INDEX brandidx ON brands (brand_name);
+
+CREATE INDEX regionidx ON dealers (region);
+

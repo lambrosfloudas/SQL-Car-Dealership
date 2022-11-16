@@ -1,0 +1,72 @@
+INSERT INTO brands (brand_name) VALUES ('Peugeot');
+INSERT INTO brands (brand_name) VALUES ('Fiat');
+INSERT INTO brands (brand_name) VALUES ('Citroen');
+INSERT INTO brands (brand_name) VALUES ('Audi');
+INSERT INTO brands (brand_name) VALUES ('BMW');
+
+INSERT INTO models (brand_id, model_name) VALUES (1, '108');
+INSERT INTO models (brand_id, model_name) VALUES (1, '208');
+INSERT INTO models (brand_id, model_name) VALUES (1, '308');
+INSERT INTO models (brand_id, model_name) VALUES (2, '500');
+INSERT INTO models (brand_id, model_name) VALUES (2, 'Punto');
+INSERT INTO models (brand_id, model_name) VALUES (3, 'C2');
+INSERT INTO models (brand_id, model_name) VALUES (3, 'C3');
+INSERT INTO models (brand_id, model_name) VALUES (4, 'A3');
+INSERT INTO models (brand_id, model_name) VALUES (4, 'A4');
+INSERT INTO models (brand_id, model_name) VALUES (5, 'X6');
+
+INSERT INTO features (description, feature_price) VALUES ('Automatic Gear', 1000);
+INSERT INTO features (description, feature_price) VALUES ('Electric Air-Condition', 500);
+INSERT INTO features (description, feature_price) VALUES ('Electric Mirrors', 400);
+
+INSERT INTO dealers (dealer_name, region) VALUES ('AEK FC', 'Athens');
+INSERT INTO dealers (dealer_name, region) VALUES ('PAOK FC', 'Thessaloniki');
+INSERT INTO dealers (dealer_name, region) VALUES ('PLATANIAS FC', 'Chania');
+
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (15000, 1, 1, 1);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (14500, 1, 1, 2);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (14500, 1, 2, 2);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (14400, 1, 3, 3);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (16500, 2, 1, 1);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (16500, 2, 1, 1);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (16000, 2, 2, 2);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (15000, 2, 3, 1);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (17000, 3, 3, 2);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (17500, 3, 3, 1);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (15000, 4, 1, 1);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (14500, 4, 2, 2);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (15000, 5, 1, 2);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (15500, 5, 2, 1);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (14000, 6, 2, 3);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (14000, 6, 3, 3);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (15000, 7, 1, 1);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (19000, 8, 1, 1);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (18500, 8, 1, 2);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (18400, 8, 3, 3);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (22500, 9, 1, 1);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (22000, 9, 2, 2);
+INSERT INTO vehicles (price, model_id, dealer_id, option_id) VALUES (45000, 10, 1, 1);
+
+INSERT INTO customers (first_name, last_name, email, phone, region) VALUES ('DIMITRIS','PAPADOPOULOS','dipap@fmail.com','6912345678', 'Athens');
+INSERT INTO customers (first_name, last_name, email, phone, region) VALUES ('STEFANOS','KYRIAKOY','stkyr@fmail.com','6911234567', 'Athens');
+INSERT INTO customers (first_name, last_name, email, phone, region) VALUES ('NIKOS','KARAMPELAS','nikar@fmail.com','6911123456', 'Irakleio');
+INSERT INTO customers (first_name, last_name, email, phone, region) VALUES ('PETROS','PAPANIKOLAOU','ppap@fmail.com','6912134574', 'Chania');
+INSERT INTO customers (first_name, last_name, email, phone, region) VALUES ('SOFIA','STELIOU','sofist@fmail.com','6914156879', 'Xanthi');
+INSERT INTO customers (first_name, last_name, email, phone, region) VALUES ('MARIA','ANAGNOSTOU','marianag@fmail.com','6912415121', 'Thessaloniki');
+INSERT INTO customers (first_name, last_name, email, phone, region) VALUES ('STELIOS','PSYXOGIOS','stepsy@fmail.com','6912351174', 'Athens');
+INSERT INTO customers (first_name, last_name, email, phone, region) VALUES ('ELENI','THEOCHARI','eleth@fmail.com','6914141414', 'Chania');
+INSERT INTO customers (first_name, last_name, email, phone, region) VALUES ('STEFANIA','LAMPROU','steflamp@fmail.com','6912111485', 'Thessaloniki');
+INSERT INTO customers (first_name, last_name, email, phone, region) VALUES ('DIMITRA','CHATZOPOULOU','dimichatz@fmail.com','6917788596', 'Athens');
+
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-09-25', 1, 3);
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-08-20', 2, 5);
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-10-15', 3, 10);
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-09-8', 4, 8);
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-07-25', 5, 1);
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-11-11', 6, 9);
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-11-15', 7, 2);
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-09-09', 7, 7);
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-09-14', 8, 8);
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-11-15', 9, 11);
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-06-18', 10, 23);
+INSERT INTO orders (order_date, customer_id, vin) VALUES ('2021-08-03', 10, 6);
